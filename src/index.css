@@ -1,0 +1,55 @@
+/* nav css */
+.nav-link{
+    position: relative;
+}
+
+.nav-link::after{
+  position: absolute;
+  content: "";
+  width: 0%;
+  transition: ease-in .3s;
+  left: 0;
+  bottom: -2px;
+  right: 0;
+  height:2px;
+  background-color: blue;
+}
+
+.nav-link:hover::after{
+    width: 100%;
+}
+/* ------------------------------- */
+
+/* hero section css */
+.container .hero-title{
+    font-size: clamp(2rem, 5vw, 4rem); /* min 2rem, max 4rem, scales with viewport */
+    line-height: 1.2;
+}
+
+.hoverbg:hover{
+    background-color:azure;
+    border-radius: 5px;
+}
+/*----------------------------------*/
+
+
+/* slidder css */
+.blog-slider {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+}
+.blog-slider::-webkit-scrollbar{
+    display: none;
+}
+
+.blog-card {
+  width: 280px; /* fixed width per card */
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: scale(1.05);
+}
+/* -------------------------------- */
